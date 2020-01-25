@@ -17,10 +17,12 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 18px;
+  text-align: left;
 
   a {
     font-weight: bold;
+    font-size: 20px;
     color: #2c3e50;
 
     &.router-link-exact-active {
