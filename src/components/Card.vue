@@ -20,7 +20,16 @@ const defDesc = 'Some quick example text to build on the card title and make up 
 @Component
 export default class Card extends Vue {
   @Prop({ default: 'Card Title' }) private title!: string;
-  @Prop({ default: 'https://picsum.photos/600/300/?image=25' }) private img!: string;
+  @Prop({ default: '/25-600x300.jpg' }) private img!: string;
   @Prop({ default: defDesc }) private description!: string;
 }
 </script>
+<style>
+    .pagination {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    .card-title {
+
+    }
+</style>
