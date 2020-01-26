@@ -1,8 +1,9 @@
 <template>
-  <b-container class="pagination">
+  <b-container class="pagination-page">
     <b-row class="w-100 text-center">
       <b-col>
-        <h1>This is example of the pagination</h1>
+        <Play />
+        <h1>This is extract data example with page pagination</h1>
         <Pagination :page="page" />
         <nav aria-label="Page navigation example">
           <ul class="pagination">
@@ -22,12 +23,14 @@
   </b-container>
 </template>
 <script>
+  import Play from '../components/Play.vue'
   import Pagination from '../components/Pagination.vue'
 
   export default {
     name: 'pagination',
     components: {
-      Pagination
+      Pagination,
+      Play,
     },
     data: () => {
       return {

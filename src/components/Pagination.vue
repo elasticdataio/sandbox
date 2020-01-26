@@ -1,6 +1,7 @@
 <template>
   <div class="pagination">
-    <div v-for="card of pages[page].cards" v-bind:key="card.title">
+    <div v-for="card of pages[page].cards"
+         v-bind:key="card.title">
       <Card :title="card.title" :description="card.description" />
     </div>
   </div>
@@ -47,3 +48,8 @@ export default class Pagination extends Vue {
   @Prop() private page!: string;
 }
 </script>
+<style>
+  .pagination {
+    justify-content: center;
+  }
+</style>
