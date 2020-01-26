@@ -34,6 +34,29 @@ export default abstract class ActionPainter {
     }
 
     static selectTextEffect(el: HTMLElement) {
-        ActionPainter.clickEffect(el);
+        // ActionPainter.selectElementContents(el)
+        const d = document.createElement("div") as HTMLElement;
+        d.className = "selection-effect";
+        const rect = el.getBoundingClientRect();
+        d.style.left = rect.left + "px";
+        d.style.top = rect.top + "px";
+        d.style.width = rect.width + "px";
+        d.style.height = rect.height + "px";
+        document.body.appendChild(d);
+        d.addEventListener('animationend', function() {
+            if (d.parentElement) {
+                d.parentElement.removeChild(d);
+            }
+        });
+    }
+
+    static selectElementContents(el: HTMLElement) {
+        const sel = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        if (sel) {
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
     }
 }

@@ -23,3 +23,17 @@
         border-width: 0.03em;
     }
 }
+.selection-effect {
+    position: fixed;
+    background-color: #ffad00;
+    animation: selection-effect 0.8s ease-out;
+    z-index: 99999;
+}
+@keyframes selection-effect {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
