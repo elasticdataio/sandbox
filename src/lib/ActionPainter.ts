@@ -44,9 +44,11 @@ export default abstract class ActionPainter {
         d.style.height = rect.height + "px";
         document.body.appendChild(d);
         d.addEventListener('animationend', function() {
-            if (d.parentElement) {
-                d.parentElement.removeChild(d);
-            }
+            setTimeout(() => {
+                if (d.parentElement) {
+                    d.parentElement.removeChild(d);
+                }
+            }, 500);
         });
     }
 
