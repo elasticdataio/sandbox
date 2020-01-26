@@ -1,5 +1,5 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "fullname" . -}}
+{{- $fullName := include "sandbox.fullname" . -}}
 {{- $servicePort := .Values.service.port -}}
 {{- $ingressPath := .Values.ingress.path -}}
 apiVersion: {{ template "sandbox.ingress.apiVersion" . }}
