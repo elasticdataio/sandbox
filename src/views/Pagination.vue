@@ -40,37 +40,17 @@
         extractCommands: [
           {
             action: () => {
-              ActionPainter.selectText('.one-1 .card-title');
+              ActionPainter.selectText('.one-1 .card-title span');
             }
           },
           {
             action: () => {
-              ActionPainter.selectText('.two-1 .card-title');
+              ActionPainter.selectText('.two-1 .card-title span');
             }
           },
           {
             action: () => {
-              ActionPainter.selectText('.three-1 .card-title');
-            }
-          },
-          {
-            action: () => {
-              ActionPainter.click('.page-item.active + .page-item a');
-            }
-          },
-          {
-            action: () => {
-              ActionPainter.selectText('.one-2 .card-title');
-            }
-          },
-          {
-            action: () => {
-              ActionPainter.selectText('.two-2 .card-title');
-            }
-          },
-          {
-            action: () => {
-              ActionPainter.selectText('.three-2 .card-title');
+              ActionPainter.selectText('.three-1 .card-title span');
             }
           },
           {
@@ -80,17 +60,37 @@
           },
           {
             action: () => {
-              ActionPainter.selectText('.one-3 .card-title');
+              ActionPainter.selectText('.one-2 .card-title span');
             }
           },
           {
             action: () => {
-              ActionPainter.selectText('.two-3 .card-title');
+              ActionPainter.selectText('.two-2 .card-title span');
             }
           },
           {
             action: () => {
-              ActionPainter.selectText('.three-3 .card-title');
+              ActionPainter.selectText('.three-2 .card-title span');
+            }
+          },
+          {
+            action: () => {
+              ActionPainter.click('.page-item.active + .page-item a');
+            }
+          },
+          {
+            action: () => {
+              ActionPainter.selectText('.one-3 .card-title span');
+            }
+          },
+          {
+            action: () => {
+              ActionPainter.selectText('.two-3 .card-title span');
+            }
+          },
+          {
+            action: () => {
+              ActionPainter.selectText('.three-3 .card-title span');
             }
           },
         ]

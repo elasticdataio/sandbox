@@ -1,6 +1,5 @@
 <template>
     <b-card
-            :title="title"
             :img-src="img"
             img-alt="Image"
             img-top
@@ -8,8 +7,11 @@
             style="max-width: 20rem;"
             class="mb-2"
     >
-      <b-card-text> {{ description }} </b-card-text>
-      <b-button>Some action</b-button>
+        <b-card-title>
+            <span>{{ title }}</span>
+        </b-card-title>
+        <b-card-text> {{ description }} </b-card-text>
+        <b-button>Some action</b-button>
     </b-card>
 </template>
 
