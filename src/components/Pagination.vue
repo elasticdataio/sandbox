@@ -17,16 +17,16 @@ function getPageData(page: number) {
   return {
     cards: [
       {
-        title: 'Card title ' + (page + 1),
-        description: `${text} This is ${page + 1} page`
+        title: `Card title ${page}.1`,
+        description: `${text} This is ${page} page`
       },
       {
-        title: 'Card title ' + (page + 2),
-        description: `${text} This is ${page + 1} page`
+        title: `Card title ${page}.2`,
+        description: `${text} This is ${page} page`
       },
       {
-        title: 'Card title ' + (page + 3),
-        description: `${text} This is ${page + 1} page`
+        title: `Card title ${page}.3`,
+        description: `${text} This is ${page} page`
       }
     ]
   }
@@ -37,8 +37,8 @@ function getPageData(page: number) {
   data: () => {
     return {
       pages: [
-        getPageData(0),
         getPageData(1),
+        getPageData(2),
         getPageData(3),
       ]
     }
