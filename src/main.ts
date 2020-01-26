@@ -7,14 +7,15 @@ import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
+import './main.css'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
-Vue.use(BootstrapVue)
-Vue.use(BootstrapVueIcons)
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
 
 new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');

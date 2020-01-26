@@ -26,6 +26,7 @@
 <script>
   import Play from '../components/Play.vue'
   import Pagination from '../components/Pagination.vue'
+  import ActionPainter from "../lib/ActionPainter";
 
   export default {
     name: 'pagination',
@@ -39,14 +40,12 @@
         extractCommands: [
           {
             action: () => {
-              const el = document.querySelector('.page-item.active + .page-item a');
-              el.click();
+              ActionPainter.click('.page-item.active + .page-item a');
             }
           },
           {
             action: () => {
-              const el = document.querySelector('.page-item.active + .page-item a');
-              el.click();
+              ActionPainter.click('.page-item.active + .page-item a');
             }
           }
         ]
