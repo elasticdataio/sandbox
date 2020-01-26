@@ -20,5 +20,16 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## DOCKER 
+
+### Build 
+
+```bash
+docker build -f install/Dockerfile -t scraper-sandbox .
+```
+
+### Run 
+
+```bash
+docker run -it --rm -p 80:80 scraper-sandbox
+```
