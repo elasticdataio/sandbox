@@ -2,7 +2,7 @@
   <b-container class="pagination-page">
     <b-row class="w-100 text-center">
       <b-col>
-        <Play />
+        <Play :extract-commands="extractCommands"/>
         <h1>This is extract data example with page pagination</h1>
         <Pagination :page="page" />
         <nav aria-label="Page navigation example">
@@ -34,7 +34,21 @@
     },
     data: () => {
       return {
-        pages: [0, 1, 2]
+        pages: [0, 1, 2],
+        extractCommands: [
+          {
+            action: () => {
+              const el = document.querySelector('.page-item.active + .page-item a');
+              el.click();
+            }
+          },
+          {
+            action: () => {
+              const el = document.querySelector('.page-item.active + .page-item a');
+              el.click();
+            }
+          }
+        ]
       };
     },
     props: {
