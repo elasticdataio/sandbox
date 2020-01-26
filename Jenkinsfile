@@ -55,6 +55,7 @@ spec:
 				container('k8s-helm') {
 					stage('SET ENV') {
 						if (env.BRANCH_NAME == 'master') {
+							env.DOCKER_TAG = "${BRANCH_NAME}_${BUILD_NUMBER}"
 							env.VALUES_FILE = 'values-prod.yaml'
 							env.KUBECONFIG = '/opt/.kube/prod-kube-config'
 						}
