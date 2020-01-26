@@ -2,7 +2,7 @@
 {{- $fullName := include "sandbox.fullname" . -}}
 {{- $servicePort := .Values.service.port -}}
 {{- $ingressPath := .Values.ingress.path -}}
-apiVersion: {{ template "sandbox.ingress.apiVersion" . }}
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
