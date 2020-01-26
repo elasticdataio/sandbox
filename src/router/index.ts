@@ -22,7 +22,11 @@ const routes = [
     path: '/pagination/:page',
     name: 'pagination',
     component: () => import('../views/Pagination.vue'),
-    props: true,
+    props: (route: any) => {
+      return {
+        page: parseInt(route.params.page)
+      };
+    },
   }
 ];
 
