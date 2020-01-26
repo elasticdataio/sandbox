@@ -31,6 +31,7 @@ export default class Play extends Vue {
     private runCommandIndex: number = 0;
     private state: string = 'pause';
 
+    @Prop() private readonly startLink!: string;
     @Prop() private readonly extractCommands!: ExtractCommand[];
 
     play(): void {
@@ -46,17 +47,24 @@ export default class Play extends Vue {
 
     private run() {
         this.runCommandIndex = 0;
-        this.interval = setInterval(() => this.invoke(), 1000);
+        this.$router.replace(this.startLink);
+        this.interval = setInterval(() => this.invoke(), 2000);
     }
 
     private invoke() {
         const command = this.extractCommands[this.runCommandIndex]
         if (!command) {
+            this.runCommandIndex = 0;
+            this.pause();
             clearInterval(this.interval);
             return;
         }
         const fn = command.action.bind(window);
-        fn.call();
+        try {
+            fn.call();
+        } catch (e) {
+            console.error(e);
+        }
         this.runCommandIndex++;
     }
 }

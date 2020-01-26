@@ -2,7 +2,8 @@
   <b-container class="pagination-page">
     <b-row class="w-100 text-center">
       <b-col>
-        <Play :extract-commands="extractCommands"/>
+        <Play :extract-commands="extractCommands"
+              start-link="/pagination/0"/>
         <h1>This is extract data example with page pagination</h1>
         <Pagination :page="page" />
         <nav aria-label="Page navigation example">
