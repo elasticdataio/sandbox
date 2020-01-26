@@ -24,4 +24,16 @@ export default abstract class ActionPainter {
         });
     }
 
+    static selectText(cssSelector: string) {
+        const el = document.querySelector(cssSelector) as HTMLElement;
+        if (!el) {
+            console.error(`element with selector ${cssSelector} not found on page`);
+            return;
+        }
+        ActionPainter.selectTextEffect(el);
+    }
+
+    static selectTextEffect(el: HTMLElement) {
+        ActionPainter.clickEffect(el);
+    }
 }

@@ -2,7 +2,9 @@
   <div class="pagination">
     <div v-for="card of pages[page].cards"
          v-bind:key="card.title">
-      <Card :title="card.title" :description="card.description" />
+      <Card :title="card.title"
+            :class="card.class"
+            :description="card.description" />
     </div>
   </div>
 </template>
@@ -18,15 +20,18 @@ function getPageData(page: number) {
     cards: [
       {
         title: `Card title ${page}.1`,
-        description: `${text} This is ${page} page`
+        description: `${text} This is ${page} page`,
+        class: `one-${page}`,
       },
       {
         title: `Card title ${page}.2`,
-        description: `${text} This is ${page} page`
+        description: `${text} This is ${page} page`,
+        class: `two-${page}`,
       },
       {
         title: `Card title ${page}.3`,
-        description: `${text} This is ${page} page`
+        description: `${text} This is ${page} page`,
+        class: `three-${page}`,
       }
     ]
   }
