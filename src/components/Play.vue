@@ -48,7 +48,7 @@ export default class Play extends Vue {
     private run() {
         this.runCommandIndex = 0;
         this.$router.replace(this.startLink);
-        this.interval = setInterval(() => this.invoke(), 2000);
+        this.interval = setInterval(() => this.invoke(), 1100);
     }
 
     private invoke() {
