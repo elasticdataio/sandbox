@@ -10,10 +10,12 @@
       </div>
       <div class="card-body">
         <h5>{{product.name}}</h5>
-        <p class="card-text">{{product.description}}</p>
-        <p>
-          <router-link :to="{name: 'product', params: {id: product.id}}"
-                       target='_blank'>
+        <p class="card-text">{{product.description.slice(0, 70)}}...</p>
+        <b-btn v-if="!product.showLink"
+               size="sm"
+               @click="showLink(product)">show link</b-btn>
+        <p v-if="product.showLink">
+          <router-link :to="{name: 'product', params: {id: product.id}}">
             description link
           </router-link>
         </p>
@@ -42,6 +44,10 @@ export default class ProductList extends Vue {
   async fetchData() {
     const response = await fetch('/products.json');
     this.$data.products = await response.json();
+  }
+
+  showLink(product: any) {
+    product.showLink = true;
   }
 }
 </script>
