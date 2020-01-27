@@ -10,6 +10,7 @@
             <th scope="col">Brand</th>
             <th scope="col">Name</th>
             <th scope="col">Price</th>
+            <th scope="col">Color</th>
             <th scope="col">Description</th>
           </tr>
           </thead>
@@ -21,6 +22,7 @@
             <td>{{product.brand}}</td>
             <td>{{product.name}}</td>
             <td>{{product.price}}</td>
+            <td>{{product.color}}</td>
             <td>{{product.description}}</td>
           </tr>
           </tbody>
