@@ -59,6 +59,16 @@
           <td>open preview</td>
           <td>open yaml</td>
         </tr>
+        <tr>
+          <td>Inner pages</td>
+          <th>
+            <router-link :to="{name: 'inner-page'}">
+              Go to inner pages, extract data and back
+            </router-link>
+          </th>
+          <td>open preview</td>
+          <td>open yaml</td>
+        </tr>
         </tbody>
       </table>
     </div>

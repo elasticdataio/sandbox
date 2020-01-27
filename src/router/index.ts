@@ -19,6 +19,21 @@ const routes = [
         page: parseInt(route.params.page)
       };
     },
+  },
+  {
+    path: '/inner-page',
+    name: 'inner-page',
+    component: () => import('../views/InnerPage.vue'),
+  },
+  {
+    path: '/product/:id',
+    name: 'product',
+    component: () => import('../components/Product.vue'),
+    props: (route: any) => {
+      return {
+        id: parseInt(route.params.id)
+      };
+    },
   }
 ];
 

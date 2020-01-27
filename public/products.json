@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "brand": "apple",
+    "name": "iPhone 5 16GB",
+    "price": "800$",
+    "description": "Renewed products work and look like new. These pre-owned products are not certified but have been inspected and tested by suppliers.",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/61%2BmrwyL24L._AC_SX679_.jpg"
+  },
+  {
+    "id": 2,
+    "brand": "apple",
+    "name": "Apple iPhone 6S, 16GB",
+    "price": "800$",
+    "description": "Renewed products work and look like new. These pre-owned products are not certified but have been inspected and tested by suppliers. ",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/81s7ZLOGOWL._AC_SX679_.jpg"
+  },
+  {
+    "id": 3,
+    "brand": "apple",
+    "name": "Apple iPhone 7, 32GB",
+    "price": "800$",
+    "description": "Renewed products work and look like new. These pre-owned products are not certified but have been inspected and tested by suppliers.",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/61qdqzt3X3L._AC_SY879_.jpg"
+  }
+]
