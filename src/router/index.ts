@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Price from '../components/Price.vue'
 import TextWithSpaces from '../components/TextWithSpaces.vue'
+import Phones from '../components/Phones.vue'
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/text-with-spaces',
     name: 'text-with-spaces',
     component: TextWithSpaces,
+  },
+  {
+    path: '/phones',
+    name: 'phones',
+    component: Phones,
   },
   {
     path: '/pagination/:page',
