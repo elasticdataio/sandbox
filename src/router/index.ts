@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Price from '../views/Price.vue'
+import Price from '../components/Price.vue'
+import TextWithSpaces from '../components/TextWithSpaces.vue'
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/price',
     name: 'price',
     component: Price,
+  },
+  {
+    path: '/text-with-spaces',
+    name: 'text-with-spaces',
+    component: TextWithSpaces,
   },
   {
     path: '/pagination/:page',
